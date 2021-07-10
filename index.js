@@ -13,6 +13,12 @@ let bookedcustomer = [];
 // dummy data room = {roomnumber:101, seatsavailable:2, amenities:'projector, coffee', price:500}, {roomnumber:102, seatsavailable:2, amenities:'projector, coffee', price:500}, {roomnumber:103, seatsavailable:2, amenities:'projector, coffee', price:500}
 // dummy data customer = {customername:"Debopam", date:"16 July 2021", starttime:"12:00", endtime: "15:00", roomnumber: 101}, {customername:"Debopam", date:"16 July 2021", starttime:"16:00", endtime: "17:00", roomnumber: 101}, {customername:"Debopam", date:"16 July 2021", starttime:"17:00", endtime: "18:00", roomnumber: 101}
 
+//View the home page
+
+app.get('/', (req,res)=>{
+    res.status(200).send("This is the home page") 
+})
+
 //Adding of new meeting rooms
 
 app.post('/room', (req, res)=>{
